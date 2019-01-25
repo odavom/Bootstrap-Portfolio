@@ -23,9 +23,48 @@
             margin-top: 110px;
             margin-bottom: 30px;
         }
+        .imagebox {
+            background: black;
+            padding: 0px;
+            position: relative;
+            text-align: center;
+            width: 150px;
+        }
+        .imagebox img {
+            opacity: 1;
+            transition: 0.5s opacity;
+        }
+        .imagebox .imagebox-desc {
+            background-color: rgba(0, 0, 0, 0.6);
+            bottom: 0px;
+            color: white;
+            font-size: 1.2em;
+            left: 0px;
+            padding: 10px 15px;
+            position: absolute;
+            transition: 0.5s padding;
+            text-align: center;
+            width: 150px;
+        }
+        .imagebox:hover img {
+            opacity: 0.7;
+        }
+
+        .imagebox:hover .imagebox-desc {
+            padding-bottom: 10%;
+        }
+        .img-title {
+            position: absolute;
+            color: #fff;
+            text-align: center;
+            left: 0;
+            right: 0;
+            top: 10%;
+            letter-spacing: 3px;
+        }
         .page-footer {
             flex-shrink: 0;
-        }
+        } 
     </style>
 
 </head>
@@ -70,27 +109,45 @@
             </div>
             <div class="container containerImages">
                 <div class="row">
-                    <div class="col-lg-6 col-md-6">
-                        <img src="images/banana-candy.jpg" style="width: 150px; height: 150px">
+                    <div class="col-sm-6 box">
+                        <div class="imagebox">
+                            <img class="img-responsive"  src="images/banana-candy.jpg" style="width: 150px; height: 150px">
+                            <span class="imagebox-desc">Banana</span>
+                        </div>
                     </div>
-                    <div class="col-lg-6 col-md-6">
-                        <img src="images/circles.jpg" style="width: 150px; height: 150px">
+                    <div class="col-sm-6">
+                        <div class="imagebox">
+                            <img class="img-responsive" src="images/circles.jpg" style="width: 150px; height: 150px">
+                            <span class="imagebox-desc">Circles</span>
+                        </div>
                     </div>
                 </div> 
                 <div class="row">
-                    <div class="col-lg-6 col-md-6">
-                        <img src="images/eye-color.jpg" style="width: 150px; height: 150px">
+                    <div class="col-sm-6">
+                        <div class="imagebox">
+                            <img src="images/eye-color.jpg" style="width: 150px; height: 150px">
+                            <span class="imagebox-desc">Eye Color</span>
+                        </div>  
                     </div>
-                    <div class="col-lg-6 col-md-6">
-                        <img src="images/fading-away.jpg" style="width: 150px; height: 150px"> 
+                    <div class="col-sm-6">
+                        <div class="imagebox">
+                            <img src="images/fading-away.jpg" style="width: 150px; height: 150px"> 
+                            <span class="imagebox-desc">Fading Away</span>
+                        </div>
                     </div>
                 </div>
                 <div class="row">
-                    <div class="col-lg-6 col-md-6">
-                        <img src="images/i-color.jpg" style="width: 150px; height: 150px">
+                    <div class="col-sm-6">
+                        <div class="imagebox">
+                            <img src="images/i-color.jpg" style="width: 150px; height: 150px">
+                            <span class="imagebox-desc">I Color</span>
+                        </div>
                     </div>
-                    <div class="col-lg-6 col-md-6">
-                        <img src="images/nuts-red-container.jpg" style="width: 150px; height: 150px">
+                    <div class="col-sm-6">
+                        <div class="imagebox">
+                            <img src="images/nuts-red-container.jpg" style="width: 150px; height: 150px">
+                            <span class="imagebox-desc">Nuts Red Container</span>
+                        </div>
                     </div>
                 </div>
             </div>
