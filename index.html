@@ -7,76 +7,89 @@
     <title>Bootstrap-Portfolio</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <style>
-        .navbar {
-            background-color: #ffffff;
-            padding: 0;
+        html,body {
+            height: 100%;
         }
-
-        .navbar-brand {
-            background-color: #4aaaa5;  
-            padding: 20px; 
+        body {
+            box-sizing: border-box;
+            display: flex;
+            flex-direction: column;
         }
-
-        .mx-auto {
-            width: 960px;
-            padding-top: 20px;
-            margin-top: 20px;
+        .container__jumbotron {
+            flex: 1 0 auto;
         }
-
-        .navbar__container--width {
-            width: 960px;
-            margin: 0 auto;
-            padding: 0;  
-            bottom: 0;
+        .jumbotron {
+            margin-top: 110px;
+            margin-bottom: 30px;
         }
+        .page-footer {
+            flex-shrink: 0;
+        }  
     </style>
+
 </head>
 <body>
-    <nav class="navbar navbar-expand-lg navbar-light bg-light sticky-top">
-        <div class="navbar navbar__container--width">
-            <a class="navbar-brand text-white" href="index.html">Anthony Mastanduno</a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse d-flex justify-content-end" id="navbarNavAltMarkup">
-                <div class="navbar-nav">
-                    <a class="nav-item nav-link active text-info" href="index.html">About <span class="sr-only">(current)</span>
-                    </a>
-                    <a class="nav-item nav-link text-info" href="portfolio.html">Portfolio</a>
-                    <a class="nav-item nav-link text-info" href="contact.html">Contact</a>
-                </div>
-            </div>
-        </div>
-    </nav> 
-    <div class="abtmeoutsidecontainer bg-secondary mx-auto">
+    <!-- This is navbar outside container and holds the inside container (which holds the logo and the nav links).  -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+        <!-- The is the navbar inside container. -->
         <div class="container">
-            <div class="row">
-                <div class="col-md-12">
-                        About Me
-                </div>
+            <!-- This is the logo, which links to the about page. -->
+            <a class="navbar-brand" href="index.html">
+            <img src="http://placehold.it/300x60?text=Logo" width="150" height="30" alt="">
+            </a>
+            <!-- This is the button that shows up when the screen is smaller. It condenses the individual links into a hamburger button -->
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+            </button>
+            <!-- THis is the container that holds the uordered list items about, portfolio, and contact -->
+            <div class="collapse navbar-collapse" id="navbarResponsive">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="index.html">About
+                            <span class="sr-only">(current)</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="portfolio.html">Portfolio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact.html">Contact</a>
+                    </li>
+                </ul>
             </div>
         </div>
-        <div class="container ">
-            <div class="row">
-                <div class="col-md-3">
-                    <img src="https://pbs.twimg.com/profile_images/2191108681/image.jpg" width="200" height="200" alt="">
-                </div>
-                <div class="col-md-9">
-                    <p >Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime voluptatum nobis dignissimos numquam perspiciatis deserunt labore nihil rerum voluptatibus totam praesentium impedit vitae nostrum beatae, veniam corrupti veritatis modi consequatur.</p>
-                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nulla architecto, nemo magni officiis dolorem numquam iusto facere omnis inventore laboriosam soluta magnam earum molestias laborum eum vero ratione minima optio.</p>
-                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quibusdam suscipit, doloribus nemo a fuga, unde omnis alias voluptatem exercitationem nesciunt ex, laborum officiis. Ad magnam, dignissimos delectus incidunt tenetur officia.</p>
-                </div>
-            </div> 
-
+    </nav>
+    <div class="container__jumbotron">
+        <div class="jumbotron">
+            <!-- This is the container that holds the About me heading the horizontal line. When i put it in the container it became more responsive to the page and kept same margin as the log and the image -->
+            <div class="container container__aboutMe__underline">
+                <h2 class="display-5">About Me</h2>
+                <hr class="my-4">
+            </div>
+            <div class="container containerImageParagraphs">
+                <div class="row">
+                    <div class="col-lg-3">
+                        <img src="https://pbs.twimg.com/profile_images/2191108681/image.jpg" width="200" height="200" alt="">
+                    </div>
+                    <div class="col-lg-9">
+                        <p >Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime voluptatum nobis dignissimos numquam perspiciatis deserunt labore nihil rerum voluptatibus totam praesentium impedit vitae nostrum beatae, veniam corrupti veritatis modi consequatur.</p>
+                        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nulla architecto, nemo magni officiis dolorem numquam iusto facere omnis inventore laboriosam soluta magnam earum molestias laborum eum vero ratione minima optio.</p>
+                        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quibusdam suscipit, doloribus nemo a fuga, unde omnis alias voluptatem exercitationem nesciunt ex, laborum officiis. Ad magnam, dignissimos delectus incidunt tenetur officia.</p>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum autem eaque sed illo explicabo numquam libero! Aut, debitis nostrum? Id officiis quis culpa ea cupiditate autem consequuntur laudantium soluta aliquid!</p>
+                    </div>
+                </div> 
+            </div>
         </div>
-    </div> 
-    <!-- Footer -->
-    <footer class="page-footer font-small blue fixed-bottom bg-dark ">
-        <!-- Copyright -->
-        <div class="footer-copyright text-center py-3">© 2018 Copyright
+    </div>  
+<!-- Footer -->
+    <footer class="page-footer font-small bg-light sticky-bottom py-2">
+        <div class="footer-copyright text-center py-2">© 2018 Copyright 
         </div>
-        <!-- Copyright -->
     </footer>
-      <!-- Footer -->    
+<!-- jQuery, javascript file for the Bootstrap's javascript file to function -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+<!-- Bootstrap's javascript file that allows the dropdown menu to work  -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
 </body>
 </html>

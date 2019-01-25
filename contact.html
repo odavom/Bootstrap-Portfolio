@@ -6,6 +6,98 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Bootstrap-Portfolio</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <style> 
+        html,body {
+            height: 100%;
+        } 
+        body {
+            box-sizing: border-box;
+            display: flex;
+            flex-direction: column;
+        }
+        .container__jumbotron {
+            flex: 1 0 auto;
+        }
+        .jumbotron {
+            margin-top: 110px;
+            margin-bottom: 30px;
+        }
+        .page-footer {
+            flex-shrink: 0;
+            height: 80px;
+        }
+        </style>
 </head>
+<body>
+     <!-- This is navbar outside container and holds the inside container (which holds the logo and the nav links).  -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+                <!-- The is the navbar inside container. -->
+        <div class="container">
+                    <!-- This is the logo, which links to the about page. -->
+            <a class="navbar-brand" href="index.html">
+            <img src="http://placehold.it/300x60?text=Logo" width="150" height="30" alt="">
+            </a>
+                <!-- This is the button that shows up when the screen is smaller. It condenses the individual links into a hamburger button -->
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+                <!-- THis is the container that holds the uordered list items about, portfolio, and contact -->
+            <div class="collapse navbar-collapse" id="navbarResponsive">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="index.html">About
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="portfolio.html">Portfolio
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact.html">Contact
+                            <span class="sr-only">(current)</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <div class="container__jumbotron">
+        <div class="jumbotron">
+                <!-- This is the container that holds the About me heading the horizontal line. When i put it in the container it became more responsive to the page and kept same margin as the log and the image -->
+            <div class="container container__portfolio__underline">
+                <h2 class="display-5">Contact</h2>
+                <hr class="my-4">
+            </div>
+            <div class="container">
+                <form>
+                    <div class="form-group">
+                    <label for="exampleFormControlInput1">Name</label>
+                    <input type="name" class="form-control" id="exampleFormControlInput1">
+                    </div>
+                    <div class="form-group">
+                        <label for="exampleFormControlInput1">Email</label>
+                        <input type="email" class="form-control" id="exampleFormControlInput1">
+                    </div>
+                    <div class="form-group">
+                        <label for="exampleFormControlTextarea1">Message</label>
+                        <textarea class="form-control" id="exampleFormControlTextarea1" rows="7"></textarea>
+                    </div>
+                    <div class="form-group">
+                        <button type="submit" class="btn btn-primary mb-2">Submit</button>
+                    </div>
+                </form> 
+            </div>  
+        </div>
+    </div>
+<!-- Footer -->
+    <footer class="page-footer font-small bg-light sticky-bottom py-2">
+        <div class="footer-copyright text-center py-2">© 2018 Copyright 
+        </div>
+    </footer>
+<!-- jQuery, javascript file for the Bootstrap's javascript file to function -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 
+<!-- Bootstrap's javascript file that allows the dropdown menu to work  -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+</body>
 
